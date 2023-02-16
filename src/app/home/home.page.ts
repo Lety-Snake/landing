@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
   ngOnInit(): void { }
   setDarkSIde() {
     let back = document.getElementById("mainBack") as HTMLElement;
@@ -21,7 +24,7 @@ export class HomePage {
         btn.style.display = 'none';
         back.style.opacity = '';
         setTimeout(() => {
-
+          this.router.navigate(['/lettySnake'])
         }, 2000);
       }, 500);
     }, 700);
