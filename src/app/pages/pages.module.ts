@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { StoryComponent } from './story/story.component';
+import { PagesComponent } from './pages.component';
 
 
 @NgModule({
   declarations: [
-    StoryComponent
+    StoryComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
+  ],
+  exports: [
   ]
 })
 export class PagesModule { }
