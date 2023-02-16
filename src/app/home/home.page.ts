@@ -7,6 +7,24 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() { }
+  ngOnInit(): void { }
+  setDarkSIde() {
+    let back = document.getElementById("mainBack") as HTMLElement;
+    let text = document.getElementById("textChange") as HTMLElement;
+    let btn = document.getElementById("btn") as HTMLElement;
+    back.style.opacity = '0';
+    setTimeout(() => {
+      back.style.backgroundImage = 'url(https://i.imgur.com/BvPEi5a.jpg)'
+      text.innerHTML = "An horrendous adventure";
+      setTimeout(() => {
+        btn.style.display = 'none';
+        back.style.opacity = '';
+        setTimeout(() => {
+
+        }, 2000);
+      }, 500);
+    }, 700);
+  }
 
 }

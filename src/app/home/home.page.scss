@@ -1,5 +1,5 @@
 .mainBody {
-  background-color: white;
+  background-color: rgb(39, 39, 46);
   height: 100Vh;
   width: 100vw;
   //background feo 
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  transition: all ease 1s;
 }
 
 .cont {
@@ -22,7 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  backdrop-filter: blur(5px) brightness(.95);
+  backdrop-filter: blur(6px) brightness(.90);
 }
 
 .titulo {
@@ -33,4 +34,34 @@
   line-height: 75px;
   color: #FDFEBA;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subT {
+  font-family: 'Ek Mukta';
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.btn {
+  width: 200px;
+  height: 55px;
+  border-radius: 10px;
+  font-family: 'Ek Mukta';
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  transition: all ease .2s;
+  background-color: #9ABAE0;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 3px 2px rgba(25, 24, 47, 0.336);
+}
+
+.btn:active {
+  scale: .95 !important;
+  filter: brightness(.7);
+}
+
+.btn:hover {
+  scale: 1.05;
+  background-color: #F37510;
 }
