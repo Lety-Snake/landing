@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { StoryComponent } from './story/story.component';
 import { PagesComponent } from './pages.component';
+import { NavBarComponent } from '../layout/nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
     StoryComponent,
-    PagesComponent
+    PagesComponent,
+    NavBarComponent
   ],
   imports: [
     CommonModule,
