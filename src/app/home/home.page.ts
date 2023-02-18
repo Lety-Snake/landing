@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   constructor(
-    private router: Router
+    private router: NavController
   ) { }
   ngOnInit(): void { }
   setDarkSIde() {
@@ -24,7 +25,12 @@ export class HomePage {
         btn.style.display = 'none';
         back.style.opacity = '';
         setTimeout(() => {
-          this.router.navigate(['/lettySnake'])
+          // this.router.navigate(['lettySnake'])
+          this.router.navigateForward('/lettySnake', {
+            // animation: '+-transition',
+            // animationDirection: 'back',
+            replaceUrl: true // this line will replace the current page with new page
+          });
         }, 2000);
       }, 500);
     }, 700);
