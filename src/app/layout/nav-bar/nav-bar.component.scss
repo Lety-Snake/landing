@@ -1,7 +1,4 @@
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -88,4 +85,10 @@ ul,
     // border-left-color: white;
     // border-bottom-color: white;
     transition: border-color 0s ease-in 0.2s, width 0.1s ease-in 0.2s, height 0.1s ease-in 0.3s;
+}
+
+@media only screen and (max-width: 546px) {
+    .btn {
+        font-size: 12px;
+    }
 }

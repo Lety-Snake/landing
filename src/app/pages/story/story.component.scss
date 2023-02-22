@@ -7,4 +7,62 @@
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 55%;
+    position: relative;
+}
+
+.mainCont {
+    width: 40vw;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.header {
+    font-family: 'Ek Mukta';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.storyTxt {
+    font-size: 20px;
+    margin: 0;
+    word-spacing: 2px;
+    line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 903px) {
+    .mainCont {
+        top: 5% !important;
+    }
+
+    .back {
+        background-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 772px) {
+    .mainCont {
+        top: 5% !important;
+        width: 60vw;
+    }
+
+    .back {
+        background-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .mainCont {
+        top: 5% !important;
+        width: 100vw;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .back {
+        background-size: 60%;
+    }
 }
