@@ -90,5 +90,26 @@ ul,
 @media only screen and (max-width: 546px) {
     .btn {
         font-size: 12px;
+        width: 100%;
+    }
+
+    .imgCont {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .btn {
+        font-size: 10px;
+    }
+
+    .navCont {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 269px) {
+    .btn {
+        font-size: 8px;
     }
 }

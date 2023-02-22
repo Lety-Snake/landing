@@ -2,9 +2,6 @@
   background-color: rgb(39, 39, 46);
   height: 100Vh;
   width: 100vw;
-  //background feo 
-  // background-image: url(https://i.imgur.com/BvPEi5a.jpg);
-  //background Bonito
   background-image: url(https://i.imgur.com/uZRnJjX.jpeg);
   background-position: center center;
   background-size: cover;
@@ -65,4 +62,50 @@
 .btn:hover {
   scale: 1.05;
   background-color: #F37510;
+}
+
+@media only screen and (max-width: 757px) {
+  .titulo {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:499px) {
+  .titulo {
+    font-size: 40px !important;
+    line-height: normal;
+  }
+
+  .subT {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 20px;
+    height: 40px
+  }
+}
+
+@media only screen and (max-width:382px) {
+  .titulo {
+    font-size: 30px !important;
+    line-height: normal;
+  }
+
+  .subT {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width:257px) {
+  .titulo {
+    font-size: 25px !important;
+    line-height: normal;
+  }
+
+  .subT {
+    font-size: 20px;
+  }
 }
