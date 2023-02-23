@@ -1,7 +1,8 @@
 {
   "name": "lety-landing",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
