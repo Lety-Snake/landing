@@ -28,7 +28,8 @@
     font-style: normal;
     font-weight: 700;
     font-size: 5rem;
-    line-height: 15px;
+    // line-height: 15px;
+    margin: 0;
     color: #FDFEBA;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -75,12 +76,13 @@
 @media only screen and (max-width:499px) {
     .titulo {
         font-size: 40px !important;
-        line-height: normal;
     }
+
     .subT {
         font-size: 30px;
         text-align: center;
     }
+
     .btn {
         width: 90%;
         font-size: 20px;
@@ -91,8 +93,8 @@
 @media only screen and (max-width:382px) {
     .titulo {
         font-size: 30px !important;
-        line-height: normal;
     }
+
     .subT {
         font-size: 22px;
     }
@@ -101,8 +103,8 @@
 @media only screen and (max-width:257px) {
     .titulo {
         font-size: 25px !important;
-        line-height: normal;
     }
+
     .subT {
         font-size: 20px;
     }

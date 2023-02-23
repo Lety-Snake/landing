@@ -3,18 +3,27 @@
     min-height: 100vh;
     box-sizing: border-box;
     background-color: #05090d;
-    // background-image: url('https://i.imgur.com/Hk2dm6b.png');
+    // background-image: url('https://i.ytimg.com/vi/xvrChKwQjDU/maxresdefault.jpg');
+    // background-image: url('https://i.ytimg.com/vi/QjuHYO25AF0/maxresdefault.jpg');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 55%;
     position: relative;
+    padding: 7vw;
+    display: flex;
 }
 
 .mainCont {
-    width: 40vw;
-    position: absolute;
-    top: 20%;
-    left: 8%;
+    width: 50%;
+}
+
+.secondCont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .header {
@@ -32,43 +41,66 @@
     line-height: 2.5rem;
 }
 
-@media only screen and (max-width: 903px) {
-    .mainCont {
-        top: 5% !important;
-    }
-    .back {
-        background-size: 70%;
+.firstImg,
+.secondImg {
+    width: 90%;
+    position: absolute;
+}
+
+.firstImg {
+    top: 0%;
+    left: 0px;
+}
+
+.secondImg {
+    top: 30%;
+    right: -10%;
+}
+
+.img {
+    width: 100%;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.496);
+    border-radius: 7px;
+    // position: absolute;
+}
+
+//#region media
+@media only screen and (max-width: 1247px) {
+    .secondImg {
+        top: 20%;
     }
 }
 
-@media only screen and (max-width: 772px) {
-    .mainCont {
-        top: 5% !important;
-        width: 60vw;
+@media only screen and (max-width: 777px) {
+    .firstImg {
+        top: 20%;
+        left: 0px;
     }
-    .back {
-        background-size: 60%;
+
+    .secondImg {
+        top: 35%;
     }
 }
 
-@media only screen and (max-width: 500px) {
-    .mainCont {
-        // top: 5% !important;
-        width: 100vw;
-        left: 0;
-        padding: 20px;
-        box-sizing: border-box;
+@media only screen and (max-width:602px) {
+
+    .firstImg,
+    .secondImg {
+        width: 90%;
+        position: initial;
     }
-    .back {
-        background-size: 60%;
+
+    .firstImg {
+        margin-top: -30px;
+    }
+
+    .secondImg {
+        margin-top: 30px;
+    }
+
+    .secondCont {
+        flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 344px) {
-    .storyTxt {
-        font-size: 18px;
-    }
-    .mainCont {
-        position: relative;
-    }
-}
+//#endregion
