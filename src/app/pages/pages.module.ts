@@ -6,6 +6,7 @@ import { StoryComponent } from './story/story.component';
 import { PagesComponent } from './pages.component';
 import { NavBarComponent } from '../layout/nav-bar/nav-bar.component';
 import { GameplayComponent } from './gameplay/gameplay.component';
+import { DownloadComponent } from './download/download.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { GameplayComponent } from './gameplay/gameplay.component';
     StoryComponent,
     PagesComponent,
     GameplayComponent,
-    NavBarComponent
+    NavBarComponent,
+    DownloadComponent
   ],
   imports: [
     CommonModule,
