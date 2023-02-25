@@ -18,8 +18,8 @@
 
 .snakeBtn {
     cursor: pointer;
-    // background-image: url('https://i.imgur.com/2DYPPZi.jpg');
     background-image: url('https://media.istockphoto.com/photos/snake-or-dragon-green-skin-with-scales-fantasy-texture-3d-rendered-picture-id1300416365?k=20&m=1300416365&s=612x612&w=0&h=D12J0O2-RewohDEZHop0ypruVg_Ok8y9ZN03y6KfO-A=');
+    // background-image: url('https://th.bing.com/th/id/OIP.PbuJxOzecEQ6MvwNHMAguwEzDL?pid=ImgDet&rs=1');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -49,5 +49,5 @@
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
-    backdrop-filter: blur(5px) brightness(.9);
+    // backdrop-filter: blur(5px) brightness(.9);
 }
