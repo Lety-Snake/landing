@@ -9,6 +9,8 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
+  ngOnInit() { }
+  goTo(section) {
+    document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 }

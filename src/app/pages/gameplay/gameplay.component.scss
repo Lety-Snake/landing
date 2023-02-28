@@ -101,6 +101,41 @@
     .secondCont {
         flex-direction: column;
     }
+
+    .header {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    .back {
+        display: block;
+    }
+
+    .mainCont,
+    .secondCont {
+        width: 100%;
+    }
+
+    .firstImg,
+    .secondImg {
+        position: initial;
+        margin: 0;
+        margin: 20px 0
+    }
+
+    .back {
+        width: 100vw;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 247px) {
+    .header {
+        font-size: 30px;
+    }
 }
 
 //#endregion
