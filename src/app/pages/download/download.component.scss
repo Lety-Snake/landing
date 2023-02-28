@@ -16,6 +16,19 @@
     box-sizing: border-box;
 }
 
+.imgCont {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+}
+
+.snake {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .snakeBtn {
     cursor: pointer;
     background-image: url('https://media.istockphoto.com/photos/snake-or-dragon-green-skin-with-scales-fantasy-texture-3d-rendered-picture-id1300416365?k=20&m=1300416365&s=612x612&w=0&h=D12J0O2-RewohDEZHop0ypruVg_Ok8y9ZN03y6KfO-A=');
@@ -35,6 +48,7 @@
     padding: 0;
     overflow: hidden;
     text-shadow: 0 0 3px black;
+    animation: shyne infinite 3s ease;
 }
 
 .snakeBtn:hover {
@@ -99,5 +113,19 @@
 @media only screen and (max-width:277px) {
     .snakeBtn {
         font-size: 12px;
+    }
+}
+
+@keyframes shyne {
+    from {
+        box-shadow: 0 0 4px 0px rgba(48, 255, 189, 0.552);
+    }
+
+    50% {
+        box-shadow: 0 0 4px 8px rgba(48, 255, 189, 0.552);
+    }
+
+    to {
+        box-shadow: 0 0 4px 0px rgba(48, 255, 189, 0.552);
     }
 }
