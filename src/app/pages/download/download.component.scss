@@ -5,6 +5,9 @@
     background-color: #05090d;
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainCont {
@@ -16,17 +19,12 @@
     box-sizing: border-box;
 }
 
-.imgCont {
-    width: 100vw;
-    height: 20vh;
-    position: relative;
-}
-
 .snake {
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
+    max-height: 120px;
 }
 
 .snakeBtn {
@@ -107,6 +105,19 @@
 @media only screen and (max-width:420px) {
     .snakeBtn {
         font-size: 17px;
+    }
+
+    .snake {
+        max-height: 70px;
+        position: initial;
+    }
+
+    .snakeCont {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        margin-bottom: 30px;
     }
 }
 

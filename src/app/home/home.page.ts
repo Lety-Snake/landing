@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  snakeLogo: string = 'https://i.imgur.com/J6NvUqj.png';
   constructor(
     private router: NavController
   ) { }
@@ -19,6 +19,7 @@ export class HomePage {
     let btn = document.getElementById("btn") as HTMLElement;
     back.style.opacity = '0';
     setTimeout(() => {
+      this.snakeLogo = 'https://i.imgur.com/Tp3uDes.png';
       back.style.backgroundImage = 'url(https://i.imgur.com/BvPEi5a.jpg)'
       text.innerHTML = "An horrendous adventure";
       setTimeout(() => {

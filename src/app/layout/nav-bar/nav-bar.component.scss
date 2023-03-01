@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     background-color: #630011;
-    height: 6vh;
+    height: 8vh;
     padding: 7px;
 }
 
@@ -87,6 +87,10 @@ ul,
     transition: border-color 0s ease-in 0.2s, width 0.1s ease-in 0.2s, height 0.1s ease-in 0.3s;
 }
 
+.img {
+    width: 50%;
+}
+
 @media only screen and (max-width: 546px) {
     .btn {
         font-size: 12px;
@@ -95,6 +99,10 @@ ul,
 
     .imgCont {
         display: none;
+    }
+
+    .nav {
+        height: 6vh;
     }
 }
 
