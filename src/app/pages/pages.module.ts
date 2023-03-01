@@ -7,6 +7,8 @@ import { PagesComponent } from './pages.component';
 import { NavBarComponent } from '../layout/nav-bar/nav-bar.component';
 import { GameplayComponent } from './gameplay/gameplay.component';
 import { DownloadComponent } from './download/download.component';
+import { VotingComponent } from './voting/voting.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { DownloadComponent } from './download/download.component';
     PagesComponent,
     GameplayComponent,
     NavBarComponent,
-    DownloadComponent
+    DownloadComponent,
+    VotingComponent
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
+    SharedModule
   ],
   exports: [
   ]

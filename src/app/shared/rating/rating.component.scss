@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.rating {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    height: 150px;
+    position: relative;
+}
+
+h2 {
+    margin: 0;
+}
+
+.rating-0 {
+    filter: grayscale(100%);
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    background-image: url('https://i.imgur.com/J6NvUqj.png');
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+}
+
+.rating>input:checked~label,
+.rating>input:checked~label~label {
+    background-image: url('https://i.imgur.com/Kj0o9E5.png');
+    animation: shyne 2s infinite ease;
+}
+
+.rating>input:not(:checked)~label:hover,
+.rating>input:not(:checked)~label:hover~label {
+    background-image: url("https://i.imgur.com/Kj0o9E5.png");
+}
+
+.emoji-wrapper {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.emoji-wrapper:before,
+.emoji-wrapper:after {
+    content: "";
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.emoji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+}
+
+.emoji>svg {
+    margin: 15px 0;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#rating-1:checked~.emoji-wrapper>.emoji {
+    transform: translateY(-100px);
+}
+
+#rating-2:checked~.emoji-wrapper>.emoji {
+    transform: translateY(-200px);
+}
+
+#rating-3:checked~.emoji-wrapper>.emoji {
+    transform: translateY(-300px);
+}
+
+#rating-4:checked~.emoji-wrapper>.emoji {
+    transform: translateY(-400px);
+}
+
+#rating-5:checked~.emoji-wrapper>.emoji {
+    transform: translateY(-500px);
+}
+
+.feedback {
+    max-width: 360px;
+    background-color: #272e38;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .05);
+}
+
+@keyframes shyne {
+    from {
+        filter: drop-shadow(0px 0px 0px rgb(93, 200, 163));
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 5px rgb(93, 200, 163));
+    }
+
+    to {
+        filter: drop-shadow(0px 0px 0px rgb(93, 200, 163));
+    }
+}
