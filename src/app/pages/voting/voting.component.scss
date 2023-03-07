@@ -35,3 +35,41 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.btnCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.btn {
+    // background-color: #678851;
+    // background: linear-gradient(310deg, rgba(59, 83, 111, 1) 4%, rgba(154, 186, 224, 1) 74%);
+    background: linear-gradient(235deg, rgb(140, 207, 149) 10%, rgba(103, 136, 81, 1) 90%);
+    width: 120px;
+    border-radius: 7px;
+    width: 40vw;
+    min-width: 200px;
+    color: white;
+    font-size: 26px;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all ease .2s;
+}
+
+.btn:hover {
+    scale: 1.02;
+    border: 1px solid black;
+    filter: brightness(1.2);
+}
+
+.btn:active {
+    scale: 1 !important;
+    filter: brightness(.7) !important;
+}

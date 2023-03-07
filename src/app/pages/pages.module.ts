@@ -9,6 +9,8 @@ import { GameplayComponent } from './gameplay/gameplay.component';
 import { DownloadComponent } from './download/download.component';
 import { VotingComponent } from './voting/voting.component';
 import { SharedModule } from '../shared/shared.module';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { DevTeamComponent } from './dev-team/dev-team.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { SharedModule } from '../shared/shared.module';
     GameplayComponent,
     NavBarComponent,
     DownloadComponent,
-    VotingComponent
+    VotingComponent,
+    AboutUsComponent,
+    DevTeamComponent
   ],
   imports: [
     CommonModule,
