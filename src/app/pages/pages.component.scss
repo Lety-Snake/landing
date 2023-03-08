@@ -3,6 +3,17 @@
     max-height: 94vh;
     overflow: auto;
     background-color: #05090d;
+    transition: all ease .5s;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flx {
+    display: flex;
+    align-items: flex-start;
+    height: 94vh;
+    max-height: 94vh;
 }
 
 .none {

@@ -1,0 +1,78 @@
+.back {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #05090d;
+    background-image: url('https://i.imgur.com/K73iaNe.jpeg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    position: relative;
+}
+
+.mainCont {
+    width: 40vw;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+}
+
+.header {
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.storyTxt {
+    font-size: 20px;
+    margin: 0;
+    word-spacing: 2px;
+    line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 903px) {
+    .mainCont {
+        top: 5% !important;
+    }
+
+    .back {
+        background-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 772px) {
+    .mainCont {
+        top: 5% !important;
+        width: 60vw;
+    }
+
+    .back {
+        background-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .mainCont {
+        // top: 5% !important;
+        width: 100vw;
+        right: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .back {
+        background-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    .storyTxt {
+        font-size: 18px;
+    }
+
+    .mainCont {
+        position: relative;
+    }
+}
