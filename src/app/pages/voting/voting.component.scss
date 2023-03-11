@@ -36,7 +36,8 @@
     background-repeat: no-repeat;
 }
 
-.btnCont {
+.btnCont,
+.commentCont {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -45,10 +46,14 @@
     box-sizing: border-box;
 }
 
+.commentCont {
+    flex-direction: column;
+}
+
 .btn {
     // background-color: #678851;
     // background: linear-gradient(310deg, rgba(59, 83, 111, 1) 4%, rgba(154, 186, 224, 1) 74%);
-    background: linear-gradient(235deg, rgb(140, 207, 149) 10%, rgba(103, 136, 81, 1) 90%);
+    background: linear-gradient(235deg, rgb(195, 34, 83) 10%, rgb(115, 25, 43) 90%);
     width: 120px;
     border-radius: 7px;
     width: 40vw;
@@ -72,4 +77,131 @@
 .btn:active {
     scale: 1 !important;
     filter: brightness(.7) !important;
+}
+
+.backModal {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+.modal {
+    background-color: #272e38;
+    border-radius: 12px;
+    width: 50vw;
+    height: 40vh;
+    min-width: 200px;
+    min-height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1454;
+    transform: scaleY(.2) scaleX(0);
+    transition: all ease .2s
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.closeBtn {
+    background-color: transparent;
+    color: white;
+    transition: all ease .1s;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.closeBtn:active {
+    scale: .7;
+    background-color: rgba(0, 0, 0, 0.302) !important;
+}
+
+.closeBtn:hover {
+    background-color: rgba(116, 116, 116, 0.302);
+}
+
+.modalBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+}
+
+.erro {
+    margin-bottom: 10px;
+}
+
+.btnClose {
+    width: 80%;
+    min-width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(235deg, rgb(195, 34, 83) 10%, rgb(115, 25, 43) 90%);
+    transition: all ease .2s;
+}
+
+.hard {
+    color: rgb(195, 34, 83);
+    margin: 0 5px;
+}
+
+.btnClose:active {
+    scale: 1 !important;
+    filter: brightness(.7);
+}
+
+.btnClose:hover {
+    scale: 1.05;
+    filter: brightness(1.1);
+}
+
+.bell {
+    color: red;
+    font-size: 2rem;
+    transition: all ease .2s;
+    animation: brght ease 2s infinite;
+}
+
+.flx {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes brght {
+    from {
+        color: rgb(77, 10, 10)
+    }
+    50% {
+        color: red
+    }
+    to {
+        color: rgb(77, 10, 10)
+    }
 }

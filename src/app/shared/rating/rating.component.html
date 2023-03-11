@@ -1,15 +1,15 @@
 <div class="feedback">
     <h2>{{title}}</h2>
     <div class="rating">
-        <input (change)="radioCheck(idRa5)" type="radio" [name]="IdR" [id]="IdR+'-5'">
+        <input (change)="radioCheck(idRa5, IdR+'-5')" type="radio" [name]="IdR" [id]="IdR+'-5'" [value]="5">
         <label [for]="IdR+'-5'"></label>
-        <input (change)="radioCheck(idRa4)" type="radio" [name]="IdR" [id]="IdR+'-4'">
+        <input (change)="radioCheck(idRa4, IdR+'-4')" type="radio" [name]="IdR" [id]="IdR+'-4'" [value]="4">
         <label [for]="IdR+'-4'"></label>
-        <input (change)="radioCheck(idRa3)" type="radio" [name]="IdR" [id]="IdR+'-3'">
+        <input (change)="radioCheck(idRa3, IdR+'-3')" type="radio" [name]="IdR" [id]="IdR+'-3'" [value]="3">
         <label [for]="IdR+'-3'"></label>
-        <input (change)="radioCheck(idRa2)" type="radio" [name]="IdR" [id]="IdR+'-2'">
+        <input (change)="radioCheck(idRa2, IdR+'-2')" type="radio" [name]="IdR" [id]="IdR+'-2'" [value]="2">
         <label [for]="IdR+'-2'"></label>
-        <input (change)="radioCheck(idRa1)" (change)="radioCheck(idRa1)" type="radio" [name]="IdR" [id]="IdR+'-1'">
+        <input (change)="radioCheck(idRa1, IdR+'-1')" type="radio" [name]="IdR" [id]="IdR+'-1'" [value]="1">
         <label [for]="IdR+'-1'"></label>
         <div class="emoji-wrapper">
             <div [id]="emos" class="emoji">

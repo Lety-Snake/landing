@@ -12,6 +12,8 @@ import { SharedModule } from '../shared/shared.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DevTeamComponent } from './dev-team/dev-team.component';
 
+import { IonicModule } from '@ionic/angular';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +24,13 @@ import { DevTeamComponent } from './dev-team/dev-team.component';
     DownloadComponent,
     VotingComponent,
     AboutUsComponent,
-    DevTeamComponent
+    DevTeamComponent,
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedModule
+    SharedModule,
+    IonicModule.forRoot()
   ],
   exports: [
   ]

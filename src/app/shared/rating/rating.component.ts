@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-rating',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RatingComponent implements OnInit {
   @Input() IdR: string;
   @Input() title: string;
+  @Output() puntuacion = new EventEmitter<string>();
 
   idRa0: string
   idRa1: string
@@ -27,7 +28,9 @@ export class RatingComponent implements OnInit {
     this.idRa5 = this.IdR + '-ra5';
     this.emos = this.IdR + '-emos'
   }
-  radioCheck(id) {
+  radioCheck(id, input) {
+    let inp = document.getElementById(input) as HTMLInputElement;
+    this.puntuacion.emit(this.IdR + "-" + inp.value);
     let wrap = document.getElementById(this.emos) as HTMLElement;
     if (id == this.idRa1)
       wrap.style.transform = 'translateY(-100px)';

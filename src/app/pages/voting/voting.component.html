@@ -2,18 +2,51 @@
     <h1 class="title">PLEASE RATE US!</h1>
     <div class="rtGenCont">
         <div class="rtCot">
-            <app-rating [IdR]="'gameplay'" [title]="'1.-Gameplay'"></app-rating>
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'gameplay'" [title]="'1.-Gameplay'"></app-rating>
         </div>
         <div class="rtCot">
-            <app-rating [IdR]="'desing'" [title]="'2.-Desing'"></app-rating>
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'music'" [title]="'2.-Music'"></app-rating>
+        </div>
+        <div class="rtCot" id="voting">
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'design'" [title]="'3.-Design'"></app-rating>
         </div>
         <div class="rtCot">
-            <app-rating [IdR]="'idk'" [title]="'3.-idk'"></app-rating>
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'story'" [title]="'4.-Story'"></app-rating>
+        </div>
+        <div class="rtCot">
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'difficulty'" [title]="'5.-Difficulty'"></app-rating>
+        </div>
+        <div class="rtCot">
+            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'commentary'" [title]="'6.-Commentary'"></app-rating>
         </div>
     </div>
-    <div class="btnCont">
+    <div class="commentCont">
+        <h1>Comment</h1>
+        <textarea class="txtArea" name="" id="commentary" cols="30" rows="10"></textarea>
+    </div>
+    <div class="btnCont" (click)="sendVoting()">
 
-        <button id="voting" class="btn">Send rating :)</button>
+        <button class="btn">Send rating :)</button>
     </div>
 </div>
 <div class="footer"></div>
+
+<div class="backModal" id="backModal">
+    <div class="modal" id="modal">
+        <div class="close">
+            <button class="closeBtn" (click)="closeModal()">
+                <ion-icon name="close" style="font-size: 2em;"></ion-icon>
+            </button>
+        </div>
+        <div class="icon">
+            <ion-icon name="notifications" class="bell"></ion-icon>
+        </div>
+        <div class="erro">
+            <h2 class="flx">The section
+                <h2 class="hard">{{section}}</h2> is missing, please fill it :D </h2>
+        </div>
+        <div class="modalBtn">
+            <button class="btnClose" (click)="closeModal()">Okey</button>
+        </div>
+    </div>
+</div>

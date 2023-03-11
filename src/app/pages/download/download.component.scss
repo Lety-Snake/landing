@@ -29,7 +29,7 @@
 
 .snakeBtn {
     cursor: pointer;
-    background-image: url('https://media.istockphoto.com/photos/snake-or-dragon-green-skin-with-scales-fantasy-texture-3d-rendered-picture-id1300416365?k=20&m=1300416365&s=612x612&w=0&h=D12J0O2-RewohDEZHop0ypruVg_Ok8y9ZN03y6KfO-A=');
+    background-image: url('https://i.imgur.com/amSoDHF.png');
     // background-image: url('https://th.bing.com/th/id/OIP.PbuJxOzecEQ6MvwNHMAguwEzDL?pid=ImgDet&rs=1');
     background-size: cover;
     background-position: center center;
@@ -40,13 +40,13 @@
     color: white;
     border-radius: 7px;
     transition: all ease .15s;
-    border: 1px solid #dedede;
+    border: 1px solid none;
     outline: none;
     box-shadow: 0 0 4px 2px rgb(0, 0, 0);
     padding: 0;
     overflow: hidden;
     text-shadow: 0 0 3px black;
-    animation: shyne infinite 3s ease;
+    animation: shyne infinite 2.3s ease;
 }
 
 .snakeBtn:hover {
@@ -88,7 +88,6 @@
         font-size: 25px;
         width: 70%;
     }
-
     .txtCont {
         width: 90vw;
         min-width: inherit;
@@ -106,12 +105,10 @@
     .snakeBtn {
         font-size: 17px;
     }
-
     .snake {
         max-height: 70px;
         position: initial;
     }
-
     .snakeCont {
         height: 80px;
         width: 100%;
@@ -129,14 +126,12 @@
 
 @keyframes shyne {
     from {
-        box-shadow: 0 0 4px 0px rgba(48, 255, 189, 0.552);
+        box-shadow: 0 0 4px 0px rgba(255, 62, 126, 0.697);
     }
-
     50% {
-        box-shadow: 0 0 4px 8px rgba(48, 255, 189, 0.552);
+        box-shadow: 0 0 4px 8px rgba(255, 62, 126, 0.697);
     }
-
     to {
-        box-shadow: 0 0 4px 0px rgba(48, 255, 189, 0.552);
+        box-shadow: 0 0 4px 0px rgba(255, 62, 126, 0.697);
     }
 }
