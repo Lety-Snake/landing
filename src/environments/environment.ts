@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  SOCKET_ENDPOINT: `https://${window.location.hostname}:3000`,
+  URL_SERVICIOS: `https://localhost:3000`,
 };
 
 /*

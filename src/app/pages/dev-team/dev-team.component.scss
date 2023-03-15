@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     height: auto;
+    flex-wrap: wrap;
 }
 
 .header {
@@ -128,47 +129,14 @@
 }
 
 //#endregion ------------------------------------------------------------------------------------------
-@media only screen and (max-width: 903px) {
-    .mainCont {
-        top: 5% !important;
-    }
-
-    .back {
-        background-size: 70%;
+@media only screen and (max-width:720px) {
+    .third {
+        width: 50%;
     }
 }
 
-@media only screen and (max-width: 772px) {
-    .mainCont {
-        top: 5% !important;
-        width: 60vw;
-    }
-
-    .back {
-        background-size: 60%;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .mainCont {
-        // top: 5% !important;
-        width: 100vw;
-        right: 0;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .back {
-        background-size: 60%;
-    }
-}
-
-@media only screen and (max-width: 344px) {
-    .storyTxt {
-        font-size: 18px;
-    }
-
-    .mainCont {
-        position: relative;
+@media only screen and (max-width:509px) {
+    .third {
+        width: 100%;
     }
 }

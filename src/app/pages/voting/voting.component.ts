@@ -37,9 +37,18 @@ export class VotingComponent implements OnInit {
       return this.showAlert('Story')
     else if (!this.finalPunc.difficulty)
       return this.showAlert('Difficulty')
-    else if (!comm.value) {
+    else if (!comm.value)
       return this.showAlert('Commentary')
+    else {
+      this.sendRequest()
     }
+
+  }
+  sendRequest() {
+    let comm = document.getElementById('commentary') as HTMLInputElement;
+    let commentary = comm.value;
+    this.finalPunc.commentary = commentary;
+    this.finalPunc.teamId = 'Letty-Snake';
   }
   section
   showAlert(section: string) {
