@@ -16,10 +16,11 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .rtCot {
-    width: 33.33%;
+    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,10 +95,10 @@
 .modal {
     background-color: #272e38;
     border-radius: 12px;
-    width: 50vw;
+    width: 700px;
     height: 40vh;
     min-width: 200px;
-    min-height: 200px;
+    min-height: 300px;
     box-sizing: border-box;
     padding: 10px;
     position: relative;
@@ -198,10 +199,42 @@
     from {
         color: rgb(77, 10, 10)
     }
+
     50% {
         color: red
     }
+
     to {
         color: rgb(77, 10, 10)
+    }
+}
+
+@media only screen and (max-width:1191px) {
+    .rtCot {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:798px) {
+    .rtCot {
+        width: 100%;
+    }
+
+    .btn {
+        border-radius: 50px;
+    }
+}
+
+@media only screen and (max-width:747px) {
+    .modal {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width:680px) {
+    h2.flx {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

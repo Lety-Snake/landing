@@ -37,6 +37,9 @@ export class VotingComponent implements OnInit {
       return this.showAlert('Story')
     else if (!this.finalPunc.difficulty)
       return this.showAlert('Difficulty')
+    else if (!comm.value) {
+      return this.showAlert('Commentary')
+    }
   }
   section
   showAlert(section: string) {

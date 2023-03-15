@@ -16,17 +16,14 @@
         <div class="rtCot">
             <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'difficulty'" [title]="'5.-Difficulty'"></app-rating>
         </div>
-        <div class="rtCot">
-            <app-rating (puntuacion)="addPunctuation($event)" [IdR]="'commentary'" [title]="'6.-Commentary'"></app-rating>
+        <div class="commentCont">
+            <h1>Comment</h1>
+            <textarea class="txtArea" name="" id="commentary" cols="30" rows="10"></textarea>
         </div>
-    </div>
-    <div class="commentCont">
-        <h1>Comment</h1>
-        <textarea class="txtArea" name="" id="commentary" cols="30" rows="10"></textarea>
-    </div>
-    <div class="btnCont" (click)="sendVoting()">
+        <div class="btnCont" (click)="sendVoting()">
 
-        <button class="btn">Send rating :)</button>
+            <button class="btn">Send rating :)</button>
+        </div>
     </div>
 </div>
 <div class="footer"></div>
