@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RatingService } from 'src/app/services/rating.service';
 
 @Component({
   selector: 'app-voting',
@@ -7,35 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servi: RatingService) { }
 
   ngOnInit() { }
+
   finalPunc: Vote = new Vote();
   addPunctuation(e: string) {
     let section = e.split('-')[0];
     let punctuaction = parseInt(e.split('-')[1]);
     if (section == 'gameplay')
-      this.finalPunc.gameplay = punctuaction;
+      this.vote.gameplay = punctuaction;
     else if (section == 'music')
-      this.finalPunc.music = punctuaction;
+      this.vote.music = punctuaction;
     else if (section == 'design')
-      this.finalPunc.design = punctuaction;
+      this.vote.design = punctuaction;
     else if (section == 'story')
-      this.finalPunc.story = punctuaction;
+      this.vote.story = punctuaction;
     else if (section == 'difficulty')
-      this.finalPunc.difficulty = punctuaction;
+      this.vote.difficulty = punctuaction;
   }
   sendVoting() {
     let comm = document.getElementById('commentary') as HTMLInputElement;
-    if (!this.finalPunc.gameplay)
+    if (!this.vote.gameplay)
       return this.showAlert('Gameplay')
-    else if (!this.finalPunc.music)
+    else if (!this.vote.music)
       return this.showAlert('Music')
-    else if (!this.finalPunc.design)
+    else if (!this.vote.design)
       return this.showAlert('Design')
-    else if (!this.finalPunc.story)
+    else if (!this.vote.story)
       return this.showAlert('Story')
-    else if (!this.finalPunc.difficulty)
+    else if (!this.vote.difficulty)
       return this.showAlert('Difficulty')
     else if (!comm.value)
       return this.showAlert('Commentary')
@@ -47,8 +49,11 @@ export class VotingComponent implements OnInit {
   sendRequest() {
     let comm = document.getElementById('commentary') as HTMLInputElement;
     let commentary = comm.value;
-    this.finalPunc.commentary = commentary;
-    this.finalPunc.teamId = 'Letty-Snake';
+    this.vote.commentary = commentary;
+    this.vote.teamId = 'Letty-Snake';
+    this.servi.sendVoting(this.vote).subscribe(response => {
+      console.log(response); // Handle the response here
+    });
   }
   section
   showAlert(section: string) {
@@ -75,6 +80,15 @@ export class VotingComponent implements OnInit {
       }, 400);
     }, 200);
   }
+  vote = {
+    "teamId": "Letty-Snake",
+    "design": null,
+    "difficulty": null,
+    "gameplay": null,
+    "music": null,
+    "story": null,
+    "commentary": ""
+  };
 }
 export class Vote {
   teamId: string;

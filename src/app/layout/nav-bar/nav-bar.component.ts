@@ -12,8 +12,10 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() { }
   about: boolean = false;
+
+  idSect
   goTo(section) {
-    if (section != 'about') {
+    if (section != 'sCont' && section != 'tCont') {
       if (!this.about)
         document.getElementById(section).scrollIntoView({ behavior: 'smooth', block: 'center' });
 
@@ -27,11 +29,12 @@ export class NavBarComponent implements OnInit {
       }
     } else {
       this.about = true;
+      this.idSect = section
       this.animateShow()
     }
   }
   animateShow() {
-    let sCont = document.getElementById('sCont') as HTMLElement;
+    let sCont = document.getElementById(this.idSect) as HTMLElement;
     let fCont = document.getElementById('fCont') as HTMLElement;
     sCont.style.transform = 'translateX(100vw)';
     setTimeout(() => {
@@ -47,7 +50,7 @@ export class NavBarComponent implements OnInit {
     }, 200);
   }
   animateHide() {
-    let sCont = document.getElementById('sCont') as HTMLElement;
+    let sCont = document.getElementById(this.idSect) as HTMLElement;
     let fCont = document.getElementById('fCont') as HTMLElement;
     if (fCont) {
       sCont.style.transform = 'translateX(100vw)';

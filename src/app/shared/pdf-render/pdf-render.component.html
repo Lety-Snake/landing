@@ -1,0 +1,29 @@
+<pdf-viewer class="pdf" [id]="pdf" [src]="src" [render-text]="true" [original-size]="false" [fit-to-page]="true" [show-all]="true" [show-borders]="false" [autoresize]="true" [zoom-scale]="'page-fit'" [zoom]="1.05">
+
+</pdf-viewer>
+
+<div class="jcc">
+    <button class="button" title="Visualizar documento" (click)="abrirPdf()">
+      <i class="fa-solid fa-eye"></i>
+    </button>
+</div>
+
+
+<!-- #region Big PDF -->
+<div class="modalCont darker" [id]="modalPdfCont">
+    <div class="carta cartaModal cartaPdf" [id]="modalPdf">
+        <pdf-viewer [zoom]="zom" class="fileEmbebed fullW" [src]="src" [render-text]="true" [fit-to-page]="true" [original-size]="false"></pdf-viewer>
+        <button type="button" (click)="closeModalPdf()" class="viewBtns">
+          <!-- <mat-icon>close</mat-icon> -->
+          <i class="fa-solid fa-xmark"></i>
+      </button>
+        <button type="button" (click)="zoom()" class="viewBtns zoom">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+      </button>
+        <button type="button" (click)="mooz()" class="viewBtns mooz">
+          <!-- <mat-icon>zoom_out</mat-icon> -->
+          <i class="fa-solid fa-magnifying-glass-minus"></i>
+      </button>
+    </div>
+</div>
+<!-- #endregion -->
