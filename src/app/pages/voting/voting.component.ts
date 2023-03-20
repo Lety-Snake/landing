@@ -39,8 +39,8 @@ export class VotingComponent implements OnInit {
       return this.showAlert('Story')
     else if (!this.vote.difficulty)
       return this.showAlert('Difficulty')
-    else if (!comm.value)
-      return this.showAlert('Commentary')
+    // else if (!comm.value)
+    //   return this.showAlert('Commentary')
     else {
       this.sendRequest()
     }
@@ -49,10 +49,15 @@ export class VotingComponent implements OnInit {
   sendRequest() {
     let comm = document.getElementById('commentary') as HTMLInputElement;
     let commentary = comm.value;
+    let btn = document.getElementById('btnSend') as HTMLButtonElement;
     this.vote.commentary = commentary;
     this.vote.teamId = 'Letty-Snake';
     this.servi.sendVoting(this.vote).subscribe(response => {
       console.log(response); // Handle the response here
+      // alert('saved')
+      btn.disabled = true;
+      btn.classList.add('btnSent');
+      btn.classList.remove('btn');
     });
   }
   section

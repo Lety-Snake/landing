@@ -51,7 +51,8 @@
     flex-direction: column;
 }
 
-.btn {
+.btn,
+.btnSent {
     // background-color: #678851;
     // background: linear-gradient(310deg, rgba(59, 83, 111, 1) 4%, rgba(154, 186, 224, 1) 74%);
     background: linear-gradient(235deg, rgb(195, 34, 83) 10%, rgb(115, 25, 43) 90%);
@@ -67,6 +68,11 @@
     border: none;
     outline: none;
     transition: all ease .2s;
+}
+
+.btnSent {
+    filter: brightness(.5);
+    cursor: initial !important;
 }
 
 .btn:hover {
