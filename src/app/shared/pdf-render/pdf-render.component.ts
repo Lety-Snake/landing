@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+// import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 @Component({
   selector: 'app-pdf-render',
@@ -8,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PdfRenderComponent implements OnInit {
   @Input() pdf: string;
   @Input() src: string;
+  @Input() url: string;
   modalPdfCont: string;
   modalPdf: string;
   close: string;
@@ -68,5 +71,9 @@ export class PdfRenderComponent implements OnInit {
         element.style.display = 'none';
       }, 500);
     }, 400);
+  }
+  down() {
+    // const browser = this.iab.create(this.url, '_system');
+    window.open(this.url);
   }
 }
