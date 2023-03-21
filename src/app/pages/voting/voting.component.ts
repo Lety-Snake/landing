@@ -54,7 +54,7 @@ export class VotingComponent implements OnInit {
     this.vote.teamId = 'Letty-Snake';
     this.servi.sendVoting(this.vote).subscribe(response => {
       console.log(response); // Handle the response here
-      // alert('saved')
+      alert('Thanks for voting :D')
       btn.disabled = true;
       btn.classList.add('btnSent');
       btn.classList.remove('btn');

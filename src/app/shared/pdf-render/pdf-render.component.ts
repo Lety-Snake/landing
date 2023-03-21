@@ -10,12 +10,17 @@ export class PdfRenderComponent implements OnInit {
   @Input() src: string;
   modalPdfCont: string;
   modalPdf: string;
-
+  close: string;
+  eye: string;
   constructor() { }
 
   ngOnInit() {
     this.modalPdfCont = this.pdf + 'modalCont';
     this.modalPdf = this.pdf + 'modalPdf';
+    this.close = this.pdf + 'close';
+    this.eye = this.pdf + 'eye';
+  }
+  ngAfterViewInit() {
 
   }
   abrirPdf() {
@@ -24,6 +29,7 @@ export class PdfRenderComponent implements OnInit {
     back.style.display = 'flex';
 
     this.animateShow(modal)
+    document.getElementById(this.close).scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   animateShow(element: HTMLElement) {
 
@@ -52,6 +58,7 @@ export class PdfRenderComponent implements OnInit {
     setTimeout(() => {
       back.style.display = 'none';
     }, 700);
+    document.getElementById(this.eye).scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   animateRemove(element: HTMLElement) {
     element.style.transform = 'scaleX(.2)';
